@@ -13,6 +13,7 @@ class DB:
     def set(cls, app, credentials):
         """
         Set flask app
+        :param credentials: Postgres credentials
         :param app: Flask
         """
         app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://{}:{}@{}:{}/{}'.format(credentials.username,
